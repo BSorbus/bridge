@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+$font-family-base: Arial, "Helvetica", sans-serif;
+$font-size-base: 14px;
+
+//$brand-primary:     #428bca;
+//$brand-success:     #5cb85c;
+//$brand-info:        #5bc0de;
+//$brand-warning:     #f0ad4e;
+//$brand-danger:      #d9534f;
+
+
+$brand-primary:     #1B3C8F;
+$brand-success:     #5cb85c;
+$brand-info:        #5bc0de;
+$brand-warning:     #f0ad4e;
+$brand-danger:      #d9534f;
+
+
+// import the CSS framework
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Make the image fully responsive */
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  };
+  a, a:hover {
+    text-decoration: none !important;
+    color: white !important;
+
+}
+
+
+// Sticky Footer 
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+body {
+  background-color: white;
+}
+
+
+main {
+  @extend .container;
+  width: 100%;
+  padding-bottom: 15px;
+  //margin-top: 52px; // accommodate the navbar 51, 52 if hover:border-bottom 
+  a, a:hover {
+    text-decoration: none !important;
+  }
+}
+
+footer {
+  margin-top: 0px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 45px;
+  padding-right: 45px;
+  font-size: 1.3em;
+  border-top: 1px solid #C7D540;
+  color: white;
+  background-color: #555;
+  a, a:hover {
+    text-decoration: none !important;
+    color: #C7D540 !important;
+  };
+
+  .row.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+    .thumbnail {
+      background-color: inherit;
+      border-color: #666;
+      height: 100%;
+      display: flex;
+      padding: 0px;
+      flex-direction: column;
+      .caption {
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      };
+      .img:hover {
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        transform: scale(1.02);
+
+        -webkit-box-shadow: 9px 9px 5px 0px rgba(0,0,0,0.55);
+        -moz-box-shadow: 9px 9px 5px 0px rgba(0,0,0,0.55);
+        box-shadow: 9px 9px 5px 0px rgba(0,0,0,0.55);
+      };
+    }
+  }
+}
